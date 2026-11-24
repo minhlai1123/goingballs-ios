@@ -1,0 +1,461 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A10000012CE0000100000001 /* AeroSphereApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000012CE0000100000011 /* AeroSphereApp.swift */; };
+		A10000022CE0000100000001 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000022CE0000100000011 /* ContentView.swift */; };
+		A10000032CE0000100000001 /* PBRSphereViewport.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000032CE0000100000011 /* PBRSphereViewport.swift */; };
+		A10000042CE0000100000001 /* PALContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000042CE0000100000011 /* PALContracts.swift */; };
+		A10000052CE0000100000001 /* RealityKitPhysicsAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000052CE0000100000011 /* RealityKitPhysicsAdapter.swift */; };
+		A10000062CE0000100000001 /* AeroSphereDynamicBenchmarkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000062CE0000100000011 /* AeroSphereDynamicBenchmarkTests.swift */; };
+		A10000A12CE0000100000001 /* TrackCourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000A12CE0000100000011 /* TrackCourse.swift */; };
+		A10000A22CE0000100000001 /* LevelCourseBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000A22CE0000100000011 /* LevelCourseBuilder.swift */; };
+		A10000A32CE0000100000001 /* GameplayEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000A32CE0000100000011 /* GameplayEngine.swift */; };
+		A10000A42CE0000100000001 /* GameAudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000A42CE0000100000011 /* GameAudioManager.swift */; };
+		A10000A52CE0000100000001 /* GamePlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000A52CE0000100000011 /* GamePlayView.swift */; };
+		A10000A62CE0000100000001 /* PlinkoMinigameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000A62CE0000100000011 /* PlinkoMinigameView.swift */; };
+		A10000A72CE0000100000001 /* LevelSelectModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000A72CE0000100000011 /* LevelSelectModal.swift */; };
+		A10000A82CE0000100000001 /* Color+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000A82CE0000100000011 /* Color+Hex.swift */; };
+		A10000B12CE0000100000001 /* bgm_gameplay.wav in Resources */ = {isa = PBXBuildFile; fileRef = A10000B12CE0000100000011 /* bgm_gameplay.wav */; };
+		A10000B22CE0000100000001 /* sfx_button.wav in Resources */ = {isa = PBXBuildFile; fileRef = A10000B22CE0000100000011 /* sfx_button.wav */; };
+		A10000B32CE0000100000001 /* sfx_checkpoint.wav in Resources */ = {isa = PBXBuildFile; fileRef = A10000B32CE0000100000011 /* sfx_checkpoint.wav */; };
+		A10000B42CE0000100000001 /* sfx_coin.wav in Resources */ = {isa = PBXBuildFile; fileRef = A10000B42CE0000100000011 /* sfx_coin.wav */; };
+		A10000B52CE0000100000001 /* sfx_key.wav in Resources */ = {isa = PBXBuildFile; fileRef = A10000B52CE0000100000011 /* sfx_key.wav */; };
+		A10000B62CE0000100000001 /* sfx_life.wav in Resources */ = {isa = PBXBuildFile; fileRef = A10000B62CE0000100000011 /* sfx_life.wav */; };
+		A10000B72CE0000100000001 /* sfx_plinko_peg.wav in Resources */ = {isa = PBXBuildFile; fileRef = A10000B72CE0000100000011 /* sfx_plinko_peg.wav */; };
+		A10000B82CE0000100000001 /* sfx_smash.wav in Resources */ = {isa = PBXBuildFile; fileRef = A10000B82CE0000100000011 /* sfx_smash.wav */; };
+		A10000B92CE0000100000001 /* sfx_victory_fanfare.wav in Resources */ = {isa = PBXBuildFile; fileRef = A10000B92CE0000100000011 /* sfx_victory_fanfare.wav */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A10000072CE0000100000001 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A10000002CE0000100000001 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A10000102CE0000100000001;
+			remoteInfo = AeroSphere;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A10000112CE0000100000001 /* AeroSphere.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AeroSphere.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A10000122CE0000100000001 /* AeroSphereTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AeroSphereTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A10000012CE0000100000011 /* AeroSphereApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AeroSphereApp.swift; sourceTree = "<group>"; };
+		A10000022CE0000100000011 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A10000032CE0000100000011 /* PBRSphereViewport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PBRSphereViewport.swift; sourceTree = "<group>"; };
+		A10000042CE0000100000011 /* PALContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PALContracts.swift; sourceTree = "<group>"; };
+		A10000052CE0000100000011 /* RealityKitPhysicsAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealityKitPhysicsAdapter.swift; sourceTree = "<group>"; };
+		A10000062CE0000100000011 /* AeroSphereDynamicBenchmarkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AeroSphereDynamicBenchmarkTests.swift; sourceTree = "<group>"; };
+		A10000082CE0000100000011 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A10000A12CE0000100000011 /* TrackCourse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackCourse.swift; sourceTree = "<group>"; };
+		A10000A22CE0000100000011 /* LevelCourseBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelCourseBuilder.swift; sourceTree = "<group>"; };
+		A10000A32CE0000100000011 /* GameplayEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameplayEngine.swift; sourceTree = "<group>"; };
+		A10000A42CE0000100000011 /* GameAudioManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameAudioManager.swift; sourceTree = "<group>"; };
+		A10000A52CE0000100000011 /* GamePlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePlayView.swift; sourceTree = "<group>"; };
+		A10000A62CE0000100000011 /* PlinkoMinigameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlinkoMinigameView.swift; sourceTree = "<group>"; };
+		A10000A72CE0000100000011 /* LevelSelectModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelSelectModal.swift; sourceTree = "<group>"; };
+		A10000A82CE0000100000011 /* Color+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Hex.swift"; sourceTree = "<group>"; };
+		A10000B12CE0000100000011 /* bgm_gameplay.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bgm_gameplay.wav; sourceTree = "<group>"; };
+		A10000B22CE0000100000011 /* sfx_button.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sfx_button.wav; sourceTree = "<group>"; };
+		A10000B32CE0000100000011 /* sfx_checkpoint.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sfx_checkpoint.wav; sourceTree = "<group>"; };
+		A10000B42CE0000100000011 /* sfx_coin.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sfx_coin.wav; sourceTree = "<group>"; };
+		A10000B52CE0000100000011 /* sfx_key.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sfx_key.wav; sourceTree = "<group>"; };
+		A10000B62CE0000100000011 /* sfx_life.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sfx_life.wav; sourceTree = "<group>"; };
+		A10000B72CE0000100000011 /* sfx_plinko_peg.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sfx_plinko_peg.wav; sourceTree = "<group>"; };
+		A10000B82CE0000100000011 /* sfx_smash.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sfx_smash.wav; sourceTree = "<group>"; };
+		A10000B92CE0000100000011 /* sfx_victory_fanfare.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sfx_victory_fanfare.wav; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A10000202CE0000100000001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A10000212CE0000100000001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A10000302CE0000100000001 = {
+			isa = PBXGroup;
+			children = (
+				A10000312CE0000100000001 /* AeroSphere */,
+				A10000322CE0000100000001 /* AeroSphereTests */,
+				A10000332CE0000100000001 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A10000312CE0000100000001 /* AeroSphere */ = {
+			isa = PBXGroup;
+			children = (
+				A10000342CE0000100000001 /* App */,
+				A10000352CE0000100000001 /* Presentation */,
+				A10000362CE0000100000001 /* Core */,
+				A10000372CE0000100000001 /* Resources */,
+				A10000082CE0000100000011 /* Info.plist */,
+			);
+			path = AeroSphere;
+			sourceTree = "<group>";
+		};
+		A10000342CE0000100000001 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				A10000012CE0000100000011 /* AeroSphereApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		A10000352CE0000100000001 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				A10000022CE0000100000011 /* ContentView.swift */,
+				A10000032CE0000100000011 /* PBRSphereViewport.swift */,
+				A10000A52CE0000100000011 /* GamePlayView.swift */,
+				A10000A62CE0000100000011 /* PlinkoMinigameView.swift */,
+				A10000A72CE0000100000011 /* LevelSelectModal.swift */,
+				A10000A82CE0000100000011 /* Color+Hex.swift */,
+			);
+			path = Presentation/Views;
+			sourceTree = "<group>";
+		};
+		A10000362CE0000100000001 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				A10000042CE0000100000011 /* PALContracts.swift */,
+				A10000052CE0000100000011 /* RealityKitPhysicsAdapter.swift */,
+				A10000A12CE0000100000011 /* TrackCourse.swift */,
+				A10000A22CE0000100000011 /* LevelCourseBuilder.swift */,
+				A10000A32CE0000100000011 /* GameplayEngine.swift */,
+				A10000A42CE0000100000011 /* GameAudioManager.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		A10000322CE0000100000001 /* AeroSphereTests */ = {
+			isa = PBXGroup;
+			children = (
+				A10000062CE0000100000011 /* AeroSphereDynamicBenchmarkTests.swift */,
+			);
+			path = AeroSphereTests;
+			sourceTree = "<group>";
+		};
+		A10000332CE0000100000001 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A10000112CE0000100000001 /* AeroSphere.app */,
+				A10000122CE0000100000001 /* AeroSphereTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A10000372CE0000100000001 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A10000B12CE0000100000011 /* bgm_gameplay.wav */,
+				A10000B22CE0000100000011 /* sfx_button.wav */,
+				A10000B32CE0000100000011 /* sfx_checkpoint.wav */,
+				A10000B42CE0000100000011 /* sfx_coin.wav */,
+				A10000B52CE0000100000011 /* sfx_key.wav */,
+				A10000B62CE0000100000011 /* sfx_life.wav */,
+				A10000B72CE0000100000011 /* sfx_plinko_peg.wav */,
+				A10000B82CE0000100000011 /* sfx_smash.wav */,
+				A10000B92CE0000100000011 /* sfx_victory_fanfare.wav */,
+			);
+			path = Resources/Audio;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A10000102CE0000100000001 /* AeroSphere */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A10000402CE0000100000001 /* Build configuration list for PBXNativeTarget "AeroSphere" */;
+			buildPhases = (
+				A10000502CE0000100000001 /* Sources */,
+				A10000202CE0000100000001 /* Frameworks */,
+				A10000802CE0000100000001 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AeroSphere;
+			productName = AeroSphere;
+			productReference = A10000112CE0000100000001 /* AeroSphere.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A10000152CE0000100000001 /* AeroSphereTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A10000412CE0000100000001 /* Build configuration list for PBXNativeTarget "AeroSphereTests" */;
+			buildPhases = (
+				A10000512CE0000100000001 /* Sources */,
+				A10000212CE0000100000001 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A10000602CE0000100000001 /* PBXTargetDependency */,
+			);
+			name = AeroSphereTests;
+			productName = AeroSphereTests;
+			productReference = A10000122CE0000100000001 /* AeroSphereTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A10000002CE0000100000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					A10000102CE0000100000001 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+					A10000152CE0000100000001 = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = A10000102CE0000100000001;
+					};
+				};
+			};
+			buildConfigurationList = A10000702CE0000100000001 /* Build configuration list for PBXProject "AeroSphere" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A10000302CE0000100000001;
+			productRefGroup = A10000332CE0000100000001 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A10000102CE0000100000001 /* AeroSphere */,
+				A10000152CE0000100000001 /* AeroSphereTests */,
+			);
+		};
+/* End PBXProject section */
+
+
+/* Begin PBXResourcesBuildPhase section */
+		A10000802CE0000100000001 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10000B12CE0000100000001 /* bgm_gameplay.wav in Resources */,
+				A10000B22CE0000100000001 /* sfx_button.wav in Resources */,
+				A10000B32CE0000100000001 /* sfx_checkpoint.wav in Resources */,
+				A10000B42CE0000100000001 /* sfx_coin.wav in Resources */,
+				A10000B52CE0000100000001 /* sfx_key.wav in Resources */,
+				A10000B62CE0000100000001 /* sfx_life.wav in Resources */,
+				A10000B72CE0000100000001 /* sfx_plinko_peg.wav in Resources */,
+				A10000B82CE0000100000001 /* sfx_smash.wav in Resources */,
+				A10000B92CE0000100000001 /* sfx_victory_fanfare.wav in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+/* Begin PBXSourcesBuildPhase section */
+		A10000502CE0000100000001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10000012CE0000100000001 /* AeroSphereApp.swift in Sources */,
+				A10000022CE0000100000001 /* ContentView.swift in Sources */,
+				A10000032CE0000100000001 /* PBRSphereViewport.swift in Sources */,
+				A10000042CE0000100000001 /* PALContracts.swift in Sources */,
+				A10000052CE0000100000001 /* RealityKitPhysicsAdapter.swift in Sources */,
+				A10000A12CE0000100000001 /* TrackCourse.swift in Sources */,
+				A10000A22CE0000100000001 /* LevelCourseBuilder.swift in Sources */,
+				A10000A32CE0000100000001 /* GameplayEngine.swift in Sources */,
+				A10000A42CE0000100000001 /* GameAudioManager.swift in Sources */,
+				A10000A52CE0000100000001 /* GamePlayView.swift in Sources */,
+				A10000A62CE0000100000001 /* PlinkoMinigameView.swift in Sources */,
+				A10000A72CE0000100000001 /* LevelSelectModal.swift in Sources */,
+				A10000A82CE0000100000001 /* Color+Hex.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A10000512CE0000100000001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10000042CE0000100000001 /* PALContracts.swift in Sources */,
+				A10000062CE0000100000001 /* AeroSphereDynamicBenchmarkTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A10000602CE0000100000001 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A10000102CE0000100000001 /* AeroSphere */;
+			targetProxy = A10000072CE0000100000001 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		A10000712CE0000100000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
+		A10000722CE0000100000001 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_OPTIMIZATION_LEVEL = s;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Release;
+		};
+		A10000422CE0000100000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = AeroSphere/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aerosphere3d.game;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A10000432CE0000100000001 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = AeroSphere/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aerosphere3d.game;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A10000442CE0000100000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aerosphere3d.game.AeroSphereTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AeroSphere.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/AeroSphere";
+			};
+			name = Debug;
+		};
+		A10000452CE0000100000001 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aerosphere3d.game.AeroSphereTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AeroSphere.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/AeroSphere";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A10000702CE0000100000001 /* Build configuration list for PBXProject "AeroSphere" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A10000712CE0000100000001 /* Debug */,
+				A10000722CE0000100000001 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A10000402CE0000100000001 /* Build configuration list for PBXNativeTarget "AeroSphere" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A10000422CE0000100000001 /* Debug */,
+				A10000432CE0000100000001 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A10000412CE0000100000001 /* Build configuration list for PBXNativeTarget "AeroSphereTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A10000442CE0000100000001 /* Debug */,
+				A10000452CE0000100000001 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+	};
+	rootObject = A10000002CE0000100000001 /* Project object */;
+}

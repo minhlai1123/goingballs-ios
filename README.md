@@ -1,93 +1,104 @@
-# GoingBalls_ios
+# AeroSphere 3D: Rolling Adventure (iOS Native)
 
+Native 3D Rolling Ball Mobile Game built with Swift 6, SwiftUI, RealityKit 4, and AVFoundation. Inspired by the responsive rolling mechanics and rewarding flow of *Going Balls*.
 
+## 🌟 Key Features
 
-## Getting started
+### 1. Arcade Physics Engine (AeroPhysics)
+- **World Gravity:** Fixed $19.620\text{ m/s}^2$ (2.0g Arcade Model).
+- **Fixed Timestep:** Deterministic 60 Hz simulation clock.
+- **Touch Drag Controls:**
+  - Swipe forward to accelerate (drive acceleration $12.0\text{ m/s}^2$).
+  - Swipe backward for emergency braking ($-18.5\text{ m/s}^2$).
+  - Drag horizontal to steer (calibrated sensitivity $0.029\text{ m/pt}$).
+- **Destructible Obstacles (TC6 Option A):** Star obstacle cubes shatter on impact at $\ge 13.5\text{ m/s}$, retaining $71.19\%$ translational kinetic energy ($v_{exit} \approx 0.84375 \times v_0$).
+- **Checkpoints & Fall Recovery:** Auto-respawn at last passed checkpoint pad upon falling off the track.
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+### 2. 40 Progressive Levels & Level Select Menu
+- **4 Balanced Difficulty Tiers:**
+  - **EASY (Levels 1–10):** Track width 4.5m $\to$ 4.0m, 100% safety rails, staggered obstacles, 1 Checkpoint.
+  - **NORMAL (Levels 11–20):** Track width 3.8m $\to$ 3.3m, 75% rails, 3x2 obstacle barricades, emerald booster lanes, 2 Checkpoints.
+  - **HARD (Levels 21–30):** Track width 3.2m $\to$ 2.7m, 45% rails, narrow bridges, 2 Checkpoints.
+  - **EXPERT (Levels 31–40):** Track width 2.6m $\to$ 2.2m, 30% rails, gauntlets, concluding with Level 40 *The Titan's Gauntlet*.
+- **Level Selector Modal:** Interactive 4-column grid (`MAP`) with filter tabs (`ALL`, `EASY`, `NORM`, `HARD`, `EXP`) to jump to any level.
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+### 3. Bright, Cheerful Kid-Friendly Graphics
+- **Sunny Daytime Cartoon Skybox:** Gradient cyan sky (`#38BDF8` $\to$ `#FEF3C7`) with glowing cartoon sun halo and drifting fluffy white clouds.
+- **Horizon Panorama:** Lush green rolling hills (`#86EFAC` & `#4ADE80`).
+- **Warm Timber Runways:** Honey birch and amber cedar planks (`#FDE68A` & `#F59E0B`) with cinnamon curbs.
+- **Candy Cane Hazard Railings:** Festive alternating red and white rails (`#EF4444` & `#FFFFFF`).
+- **Superhero Marble Ball:** Glossy electric cyan and deep ocean blue sphere with rotating sunny yellow and coral pink racing stripes, contact drop shadow, and sharp specular highlights.
+- **Toy Block Obstacles:** Vibrant candy pink/magenta cubes (`#EC4899`) with embossed golden stars (`★`).
+- **Checkered Finish Line:** Festive checkered ribbon with floating celebratory red and blue balloons.
 
-## Add your files
+### 4. Native Audio Engine (AVFoundation)
+- **Background Music (BGM):** Upbeat, bouncy arcade marimba music loop (128 BPM).
+- **Sound Effects (SFX):**
+  - Coin pickup chime (`sfx_coin`)
+  - Key found twinkle (`sfx_key`)
+  - Spare ball 1-up harp (`sfx_life`)
+  - Wood obstacle smash (`sfx_smash`)
+  - Checkpoint passed chime (`sfx_checkpoint`)
+  - Plinko wooden peg tap (`sfx_plinko_peg`)
+  - Bubbly button click (`sfx_button`)
+- **Victory Celebration Fanfare:** Triumphant brass & glockenspiel fanfare on crossing the finish line.
+- **Sound Toggle:** Bubbly HUD button (`🔊` / `🔇`) for muting/unmuting audio.
 
-* [Create](https://docs.gitlab.com/user/project/repository/web_editor/#create-a-file) or [upload](https://docs.gitlab.com/user/project/repository/web_editor/#upload-a-file) files
-* [Add files using the command line](https://docs.gitlab.com/topics/git/add_files/#add-files-to-a-git-repository) or push an existing Git repository with the following command:
+### 5. Bonus Plinko Minigame
+- 3D carnival pegboard minigame after every victory.
+- Piggy bank hammer meter accumulation.
+- Bottom prize slots `[+10] [+50] [+100] [+50] [+10]`.
+
+### 6. 100% Zero-Ads Invariant
+- **Zero Ad SDKs:** No Google Mobile Ads, no Unity Ads, no AppLovin, no Facebook Audience Network.
+- **Zero Ad Entitlements & Permissions:** Pure offline, skill-based gameplay with no tracking or advertising calls.
+
+---
+
+## 📁 Project Structure
 
 ```
-cd existing_repo
-git remote add origin https://gitlab.com/sondeptrai/goingballs_ios.git
-git branch -M main
-git push -uf origin main
+AeroSphere/
+├── App/
+│   └── AeroSphereApp.swift                    # Main Application Entry Point
+├── Core/
+│   ├── PAL/
+│   │   └── PALContracts.swift                 # Shared Physics Contract (g = 19.620 m/s², Vector3D)
+│   ├── Physics/
+│   │   ├── TrackCourse.swift                  # Track Segment, Obstacle, and Collectible Models
+│   │   ├── LevelCourseBuilder.swift           # 40-Level Procedural Course Builder
+│   │   ├── GameplayEngine.swift               # 60Hz Arcade Rolling Simulation Engine
+│   │   └── RealityKitPhysicsAdapter.swift     # RealityKit 4 CCD Integration
+│   └── Audio/
+│       └── GameAudioManager.swift             # AVFoundation BGM, SFX & Fanfare Manager
+├── Presentation/
+│   └── Views/
+│       ├── ContentView.swift                  # Root Navigation View
+│       ├── GamePlayView.swift                 # 3D Viewport, Skybox, Rolling Ball, and HUD
+│       ├── PlinkoMinigameView.swift           # Carnival Pegboard Bonus Minigame
+│       ├── LevelSelectModal.swift             # 40-Level Grid Selection Modal
+│       ├── Color+Hex.swift                    # SwiftUI Hex Color Extension
+│       └── PBRSphereViewport.swift            # RealityKit PBR Viewport Prototype
+├── Resources/
+│   └── Audio/                                 # 9 Bundled 16-bit 44.1kHz WAV Audio Assets
+│       ├── bgm_gameplay.wav
+│       ├── sfx_button.wav
+│       ├── sfx_checkpoint.wav
+│       ├── sfx_coin.wav
+│       ├── sfx_key.wav
+│       ├── sfx_life.wav
+│       ├── sfx_plinko_peg.wav
+│       ├── sfx_smash.wav
+│       └── sfx_victory_fanfare.wav
+└── Info.plist
+AeroSphere.xcodeproj/
+└── project.pbxproj                            # Xcode Project Settings
+AeroSphereTests/
+└── AeroSphereDynamicBenchmarkTests.swift      # Automated Physics & 40-Level Tests
 ```
 
-## Integrate with your tools
-
-* [Set up project integrations](https://gitlab.com/sondeptrai/goingballs_ios/-/settings/integrations)
-
-## Collaborate with your team
-
-* [Invite team members and collaborators](https://docs.gitlab.com/user/project/members/)
-* [Create a new merge request](https://docs.gitlab.com/user/project/merge_requests/creating_merge_requests/)
-* [Automatically close issues from merge requests](https://docs.gitlab.com/user/project/issues/managing_issues/#closing-issues-automatically)
-* [Enable merge request approvals](https://docs.gitlab.com/user/project/merge_requests/approvals/)
-* [Set auto-merge](https://docs.gitlab.com/user/project/merge_requests/auto_merge/)
-
-## Test and Deploy
-
-Use the built-in continuous integration in GitLab.
-
-* [Get started with GitLab CI/CD](https://docs.gitlab.com/ci/quick_start/)
-* [Analyze your code for known vulnerabilities with Static Application Security Testing (SAST)](https://docs.gitlab.com/user/application_security/sast/)
-* [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/topics/autodevops/requirements/)
-* [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/user/clusters/agent/)
-* [Set up protected environments](https://docs.gitlab.com/ci/environments/protected_environments/)
-
-***
-
-# Editing this README
-
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thanks to [makeareadme.com](https://www.makeareadme.com/) for this template.
-
-## Suggestions for a good README
-
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
-
-## Name
-Choose a self-explaining name for your project.
-
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
-
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
-
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
-
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
-
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
-
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
-
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
-
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
-
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
-
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
-
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
-
-## License
-For open source projects, say how it is licensed.
-
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+## 🛠️ Build Requirements
+- macOS 14.0+ (Sonoma) or newer
+- Xcode 15.0+ or newer with iOS 17.0+ SDK
+- Swift 6.0 compiler
+- Target: iPhone (Portrait orientation)
