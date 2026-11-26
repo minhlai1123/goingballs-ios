@@ -120,7 +120,7 @@ public class GameplayEngine: @unchecked Sendable {
 
         // Horizontal Steering (TC7 Calibration: 0.029 m/dp)
         let steerSpeed = 8.5
-        let newVx = steerInput * steerSpeed
+        var newVx = steerInput * steerSpeed
 
         // 2. Track Surface Height & Slope Gravity Integration
         let trackY = course.getTrackHeightAt(ballPosition.z)

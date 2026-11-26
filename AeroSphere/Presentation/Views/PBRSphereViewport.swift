@@ -102,8 +102,7 @@ private struct RealityKitPBRView: View {
             sphereEntity.components.set(physics)
 
             var collision = CollisionComponent(
-                shapes: [.generateSphere(radius: Float(PhysicsConstants.ballRadius))],
-                mode: .continuous
+                shapes: [.generateSphere(radius: Float(PhysicsConstants.ballRadius))]
             )
             sphereEntity.components.set(collision)
 
