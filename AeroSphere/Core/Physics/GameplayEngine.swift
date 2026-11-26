@@ -151,9 +151,11 @@ public class GameplayEngine: @unchecked Sendable {
             let halfW = segment.width / 2.0 - ballR
             if segment.hasLeftRail && newX < -halfW {
                 newX = -halfW
+                newVx = -newVx * PhysicsConstants.restitutionCoefficient
             }
             if segment.hasRightRail && newX > halfW {
                 newX = halfW
+                newVx = -newVx * PhysicsConstants.restitutionCoefficient
             }
         }
 

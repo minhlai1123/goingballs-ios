@@ -22,12 +22,14 @@
     <string>1</string>
     <key>LSRequiresIPhoneOS</key>
     <true/>
+    <key>MinimumOSVersion</key>
+    <string>15.0</string>
     <key>UILaunchScreen</key>
     <dict/>
     <key>UISupportedInterfaceOrientations</key>
     <array>
         <string>UIInterfaceOrientationPortrait</string>
     </array>
-    <!-- Zero-Ads Invariant: NO NSUserTrackingUsageDescription is declared -->
+    <!-- Zero-Ads Invariant: 100% Kid-Safe, No tracking, No ads -->
 </dict>
 </plist>
